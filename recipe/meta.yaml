@@ -11,8 +11,8 @@ source:
   sha256: 10838d75e7408e28074bb0e07cc2d7576c29686dc9df5029c38e8f72d3731bff
 
 build:
-  number: 2
-  skip: True  # [win]
+  number: 3
+  skip: True  # [win and python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
