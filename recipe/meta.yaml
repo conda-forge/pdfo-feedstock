@@ -1,5 +1,5 @@
 {% set name = "pdfo" %}
-{% set version = "1.0" %}
+{% set version = "1.1" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdfo-{{ version }}.tar.gz
-  sha256: 10838d75e7408e28074bb0e07cc2d7576c29686dc9df5029c38e8f72d3731bff
+  sha256: 9cd2ca089e6dcbf8dc4494a9de2c41c226d65b621bc102cf990b5426887eaabd
 
 build:
-  number: 3
-  skip: True  # [win and python_impl == 'pypy']
+  number: 0
+  skip: true  # [win and python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,11 +20,11 @@ requirements:
     - {{ compiler('fortran') }}
   host:
     - pip
-    - numpy
-    - python  # [py>=27]
+    - numpy >=1.20.0
+    - python  # [py>=37]
   run:
-    - numpy
-    - python  # [py>=27]
+    - numpy >=1.20.0
+    - python  # [py>=37]
 
 test:
   imports:
