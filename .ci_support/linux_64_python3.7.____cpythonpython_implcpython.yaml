@@ -10,14 +10,12 @@ fortran_compiler:
 - gfortran
 fortran_compiler_version:
 - '9'
-numpy:
-- '1.19'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.9.* *_cpython
+- 3.7.* *_cpython
 python_impl:
 - cpython
 target_platform:
@@ -26,5 +24,4 @@ zip_keys:
 - - cdt_name
   - docker_image
 - - python
-  - numpy
   - python_impl
