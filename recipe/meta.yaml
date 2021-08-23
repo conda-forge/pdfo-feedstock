@@ -20,11 +20,11 @@ requirements:
     - {{ compiler('fortran') }}
   host:
     - pip
-    - numpy
-    - python  # [py>=27]
+    - numpy >=1.20.0
+    - python  # [py>=37]
   run:
-    - numpy
-    - python  # [py>=27]
+    - numpy >=1.20.0
+    - python  # [py>=37]
 
 test:
   imports:
