@@ -1,5 +1,5 @@
 {% set name = "pdfo" %}
-{% set version = "1.2" %}
+{% set version = "1.3.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pdfo-{{ version }}.tar.gz
-  sha256: 6e0c9add5ee7a3ee7b67a1f80a095c2df8699e9bf94b06bf9aa09cfc0ff216d1
+  sha256: 443e0ea8580ef7f788f871148902ca306488109dae590a4218f5dfaee939f3db
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win and python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
